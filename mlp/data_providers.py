@@ -156,6 +156,8 @@ class MNISTDataProvider(DataProvider):
             to zero except for the column corresponding to the correct class
             which is equal to one.
         """
+        num_classes = 10
+        return np.eye(num_classes)[int_targets]
         raise NotImplementedError()
 
 
